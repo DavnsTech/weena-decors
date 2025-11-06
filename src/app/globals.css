@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+/* Weena Decor Brand Colors */
+:root {
+  /* Brand Colors */
+  --brand-primary: #8ec095;
+  --brand-primary-light: #a8d1af;
+  --brand-primary-dark: #74a67b;
+  
+  --brand-secondary: #d69775;
+  --brand-secondary-light: #e5b599;
+  --brand-secondary-dark: #c77d5b;
+  
+  --brand-neutral: #f3ede3;
+  --brand-neutral-light: #f9f6f0;
+  --brand-neutral-dark: #e6dccf;
+  
+  --brand-dark: #2c2c2c;
+  --brand-light: #ffffff;
+  
+  /* Semantic Colors */
+  --color-success: #10b981;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+  --color-info: #3b82f6;
+  
+  /* Base Colors */
+  --background: #ffffff;
+  --foreground: #2c2c2c;
+}
+
+@theme inline {
+  /* Weena Decor Custom Theme */
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-primary-light: var(--brand-primary-light);
+  --color-brand-primary-dark: var(--brand-primary-dark);
+  
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-secondary-light: var(--brand-secondary-light);
+  --color-brand-secondary-dark: var(--brand-secondary-dark);
+  
+  --color-brand-neutral: var(--brand-neutral);
+  --color-brand-neutral-light: var(--brand-neutral-light);
+  --color-brand-neutral-dark: var(--brand-neutral-dark);
+  
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-light: var(--brand-light);
+  
+  --color-success: var(--color-success);
+  --color-error: var(--color-error);
+  --color-warning: var(--color-warning);
+  --color-info: var(--color-info);
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  /* Fonts will be set via next/font in layout.tsx */
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Base */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.75;
+}
+
+/* Container Utility */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
